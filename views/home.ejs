@@ -1,0 +1,15 @@
+<%- include("header"); -%>
+
+<h1 class="home">Welcome to the Journal of Talk of the Town !!</h1>
+
+<p>
+    <% allPosts.forEach(function(postDetails) { %>
+            <h1><%= postDetails.postTitle %></h1>
+            <p>
+                <%= postDetails.postText.slice(0,100) + " ..." %>
+                <a href="/posts/<%= postDetails.postTitle %>">Read More</a>
+            </p>     
+    <% }); %>
+</p>
+
+<%- include("footer"); -%>
